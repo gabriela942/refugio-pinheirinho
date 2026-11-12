@@ -16,6 +16,7 @@ def draw(img, pts, label, lpos, scale=1.0):
     d.rounded_rectangle((bb[0]-pad, bb[1]-pad, bb[2]+pad, bb[3]+pad), radius=int(10*scale), fill=(29, 51, 40))
     d.text((x, y), label, font=f, fill=(255, 255, 255))
 JOBS = {
+  'rota-1': ([(450, 490), (285, 425)], 'Entrada', (200, 335)),
   'rota-2': ([(560, 110), (378, 292)], 'Pegue a esquerda', (520, 50)),
   'rota-3': ([(640, 110), (485, 225)], 'Portal da fazenda', (600, 50)),
   'rota-6': ([(500, 520), (600, 450), (690, 395)], 'Direita, depois esquerda', (300, 300)),
