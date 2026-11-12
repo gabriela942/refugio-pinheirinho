@@ -295,6 +295,22 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .local__grid p{color:var(--muted)}
 .local__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .local__actions a[hidden]{display:none}
+.local__actions--sub{margin-top:14px}
+.local__actions[hidden],.local__actions:has(> a[hidden]:only-child){display:none}
+.local__tip{margin-top:16px;font-size:.95rem}
+.btn--route{color:#fff;padding:15px 26px;font-size:1rem}
+.btn--waze{background:#1a8fd6;box-shadow:0 12px 30px -14px rgba(26,143,214,.85)}
+.btn--waze:hover{background:#1580c0}
+.btn--gmaps{background:var(--forest);box-shadow:0 12px 30px -14px rgba(29,51,40,.8)}
+.btn--gmaps:hover{background:#264536}
+.route{margin-top:clamp(56px,8vw,100px)}
+.route[hidden]{display:none}
+.route__head{max-width:640px;margin:0 auto 28px;text-align:center}
+.route__head .eyebrow{justify-content:center}
+.route__head h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1;color:var(--forest);margin-bottom:14px}
+.route__head p{color:var(--muted)}
+.route__video{max-width:960px;margin:0 auto;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/9;background:#000;box-shadow:0 30px 60px -30px rgba(29,51,40,.45)}
+.route__video iframe{width:100%;height:100%;border:0;display:block}
 .local__map{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:#dfe5d9}
 .local__map iframe{width:100%;height:100%;border:0}
 .local__mapph{position:relative;height:100%}
@@ -350,6 +366,7 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
   body{font-size:16px}
   .hero__logo{margin-top:0}
   .hero__actions .btn{width:100%}
+  .local__actions .btn--route{flex:1 1 100%}
   .hero__scroll{display:none}
   .intro__visual{height:440px}
   .intro__stamp{display:none}
