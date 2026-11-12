@@ -84,13 +84,13 @@
 
   /* ---------- A CASA: explorador ---------- */
   const ROOMS = [
-    { name: "Por fora", imgs: ["fachada|A casa", "casa-noite-2|A casa à noite", "casa-noite-1|A casa à noite"],
+    { name: "Por fora", imgs: ["casa-gato|A casa", "fachada|A casa", "casa-2|A casa", "casa-noite-2|A casa à noite", "casa-noite-1|A casa à noite"],
       text: "Uma casa de madeira amarela, com varanda em volta e gramado a perder de vista. Quando escurece, as luzes da varanda acendem e a casa fica ainda mais aconchegante.",
       feats: ["Casa de madeira", "Varanda iluminada", "Gramado amplo", "Jardim"] },
     { name: "Sala", imgs: ["sala-estar", "sala-jantar"],
       text: "Lareira de tijolinho, sofás para a família toda e janelas de vidro que abrem para a varanda. A mesa de jantar fica ao lado da estante cheia de livros e jogos.",
       feats: ["Lareira", "TV", "Mesa de jantar", "Livros e jogos de tabuleiro"] },
-    { name: "Cozinha", imgs: ["cozinha-1", "cozinha-2"],
+    { name: "Cozinha", imgs: ["cozinha-1", "cozinha-2", "cozinha-cafe|Café da manhã de frente para o jardim"],
       text: "Ampla, iluminada e completa. Tem tudo para cozinhar de verdade: do café da manhã ao jantar de domingo.",
       feats: ["Fogão de 6 bocas", "Lava-louças", "Micro-ondas e forno elétrico", "Panelas e utensílios", "Mesa para refeições"] },
     { name: "Quartos", imgs: ["quarto-casal|Quarto 1 · suíte de casal", "banheiro-suite|Banheiro da suíte", "quarto-solteiro|Quarto 2 · duas camas de solteiro", "quarto-3b|Quarto 3 · duas camas de solteiro", "quarto-3a|Quarto 3 · duas camas de solteiro"],
@@ -102,7 +102,7 @@
     { name: "Varanda", imgs: ["varanda"],
       text: "A varanda de madeira abraça a casa e olha direto para o lago. Tem rede, poltronas e o melhor café da manhã da sua vida.",
       feats: ["Rede", "Vista para o lago", "Mesa externa", "Espreguiçadeiras"] },
-    { name: "Área gourmet", imgs: ["churrasqueira", "area-externa"],
+    { name: "Área gourmet", imgs: ["churrasqueira", "area-externa", "gourmet-violao|Área gourmet"],
       text: "Coberta e integrada ao jardim. Churrasqueira, forno de pizza e fogão a lenha num só lugar, com mesa grande para reunir todo mundo.",
       feats: ["Churrasqueira", "Forno de pizza a lenha", "Fogão a lenha", "Pia e bancada", "Mesa comunitária", "Lavabo"] },
     { name: "Lavanderia", imgs: ["lavanderia"],
