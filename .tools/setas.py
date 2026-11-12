@@ -15,11 +15,13 @@ def draw(img, pts, label, lpos, scale=1.0):
     bb = d.textbbox((x, y), label, font=f); pad = int(12*scale)
     d.rounded_rectangle((bb[0]-pad, bb[1]-pad, bb[2]+pad, bb[3]+pad), radius=int(10*scale), fill=(29, 51, 40))
     d.text((x, y), label, font=f, fill=(255, 255, 255))
+def bez(p0,p1,p2,p3,n=40):
+    return [tuple((1-t)**3*a+3*(1-t)**2*t*b+3*(1-t)*t**2*c+t**3*d for a,b,c,d in zip(p0,p1,p2,p3)) for t in [i/n for i in range(n+1)]]
 JOBS = {
   'rota-1': ([(450, 490), (285, 425)], 'Entrada', (200, 335)),
   'rota-2': ([(560, 110), (378, 292)], 'Pegue a esquerda', (520, 50)),
   'rota-3': ([(640, 110), (485, 225)], 'Portal da fazenda', (600, 50)),
-  'rota-6': ([(500, 520), (600, 450), (690, 395)], 'Direita, depois esquerda', (300, 300)),
+  'rota-6': (bez((470,545),(640,520),(720,430),(600,355))+[(520,345)], 'Direita, depois esquerda', (300,250)),
   'rota-7': ([(495, 200), (495, 385)], 'A casa', (440, 130)),
 }
 for name, (pts, label, lpos) in JOBS.items():
