@@ -134,6 +134,7 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .story__mark{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--wood);color:var(--wood);font-family:var(--serif);font-size:1.3rem;z-index:1}
 .story__item h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);color:var(--forest);margin-bottom:8px}
 .story__item p{color:var(--muted);max-width:440px}
+.story__item p.story__sign{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--wood)}
 .story__item img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius)}
 
 /* ---------- A CASA ---------- */
