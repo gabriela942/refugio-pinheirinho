@@ -307,7 +307,7 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .loc__intro{padding-top:clamp(130px,16vw,170px)}
 .loc__intro h1{margin-bottom:22px}
 .local__map[hidden]{display:none}
-.loc__help{margin-top:clamp(48px,7vw,80px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.loc__help{margin-top:clamp(48px,7vw,80px);padding-bottom:clamp(56px,8vw,96px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
 .loc__help p{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--forest)}
 .steps{margin-top:clamp(64px,9vw,110px)}
 .steps__list{list-style:none;padding:0;margin:0 auto;max-width:1040px;display:grid;gap:clamp(28px,4vw,44px)}
