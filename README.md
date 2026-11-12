@@ -1,6 +1,7 @@
 # Refúgio Pinheirinho — site
 
-Site estático publicado em https://refugiopinheirinho.com.br (Cloudflare Pages).
+Site estático publicado em https://refugiopinheirinho.com.br.
+Roda numa VPS da Hostinger (srv1997156) com nginx e um app Node para `/api/agenda`; a Cloudflare fica na frente (DNS e proxy).
 
 ## Onde editar
 
@@ -14,18 +15,12 @@ Site estático publicado em https://refugiopinheirinho.com.br (Cloudflare Pages)
 
 ## Publicação
 
-O projeto na Cloudflare Pages deve estar ligado a este repositório.
-Configuração de build: sem comando de build, pasta de saída `/` (raiz).
-Cada push na branch `main` publica o site.
+A pasta do site na VPS deve puxar a branch `main` deste repositório
+(git pull por webhook, cron ou GitHub Actions). Cada push na `main` vai para o ar.
 
 ## Atenção: `/api/agenda`
 
 O calendário de reserva lê as datas bloqueadas de `/api/agenda`
-(`availabilityEndpoint` em `config.js`). Esse endpoint roda no servidor
-(Cloudflare Pages Function ou Worker) e o código dele **não está neste
-repositório**, porque não dá para baixá-lo do site no ar.
-
-Antes de ligar o Git ao projeto do Pages, confira no painel da Cloudflare de onde
-vem esse endpoint. Se for uma Pages Function (pasta `functions/` do projeto),
-copie o arquivo para `functions/api/agenda.js` aqui; senão o próximo deploy
-derruba o calendário.
+(`availabilityEndpoint` em `config.js`). Esse endpoint é um app Node na VPS
+e o código dele **ainda não está neste repositório** (não dá para baixá-lo do
+site no ar). Ele deve entrar na pasta `api/`.
