@@ -376,3 +376,21 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 /* logo do menu some no topo (o hero já mostra a logo grande) */
 .nav__logo{transition:opacity .4s}
 .nav:not(.is-solid):not(.is-open) .nav__logo{opacity:0;pointer-events:none}
+
+/* ---------- cachoeira ---------- */
+.falls{background:var(--cream)}
+.falls__head{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.falls__text .lead{max-width:470px}
+.falls__video{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--forest)}
+.falls__video video{width:100%;height:100%;object-fit:cover;display:block}
+.falls__pics{display:grid;gap:10px;margin-top:clamp(28px,4vw,48px)}
+.falls__row{display:flex;gap:10px}
+.falls__row img{flex:var(--r) 1 0;min-width:0;aspect-ratio:var(--r);object-fit:cover;border-radius:var(--radius)}
+@media (max-width:900px){
+  .falls__head{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .falls__pics{grid-template-columns:1fr 1fr}
+  .falls__row{display:contents}
+  .falls__row img{aspect-ratio:1;width:100%}
+}
