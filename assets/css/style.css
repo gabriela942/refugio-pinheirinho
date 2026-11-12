@@ -160,6 +160,7 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .rooms__nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.88);color:var(--forest);font-size:1.6rem;line-height:1;display:grid;place-items:center;opacity:0;transition:opacity .3s}
 .rooms__photo:hover .rooms__nav,.rooms__nav:focus-visible{opacity:1}
 .rooms__nav--prev{left:14px}.rooms__nav--next{right:14px}
+.rooms__cap{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 110px);background:rgba(29,51,40,.75);color:#fff;font-size:.82rem;padding:4px 12px;border-radius:999px;letter-spacing:.02em}
 .rooms__count{position:absolute;right:14px;bottom:14px;background:rgba(29,51,40,.75);color:#fff;font-size:.8rem;padding:4px 12px;border-radius:999px;letter-spacing:.06em}
 .rooms__info h3{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.6rem);font-weight:500;color:var(--forest);margin-bottom:10px}
 .rooms__info p{color:var(--muted);margin-bottom:20px}

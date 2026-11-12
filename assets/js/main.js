@@ -90,12 +90,12 @@
     { name: "Cozinha", imgs: ["cozinha-1", "cozinha-2"],
       text: "Ampla, iluminada e completa. Tem tudo para cozinhar de verdade: do café da manhã ao jantar de domingo.",
       feats: ["Fogão de 6 bocas", "Lava-louças", "Micro-ondas e forno elétrico", "Panelas e utensílios", "Mesa para refeições"] },
-    { name: "Quartos", imgs: ["quarto-casal", "quarto-solteiro"],
-      text: "Quartos aconchegantes com piso de madeira, cortinas de crochê e janelas para o verde.",
-      feats: ["Quarto de casal", "Quarto com camas de solteiro", "Roupa de cama"] },
-    { name: "Banheiros", imgs: ["banheiro-1", "banheiro-2"],
-      text: "Banheiros com box de vidro e ventilação natural.",
-      feats: ["Box de vidro", "Chuveiro", "Toalhas"] },
+    { name: "Quartos", imgs: ["quarto-casal|Suíte de casal", "quarto-solteiro|Quarto com duas camas de solteiro"],
+      text: "São três quartos: uma suíte de casal, com banheiro próprio, e dois quartos com duas camas de solteiro cada um. Todos com piso de madeira, cortinas de crochê e janela para o verde. Roupa de cama e toalhas estão à disposição de vocês.",
+      feats: ["1 suíte de casal com banheiro", "2 quartos com 2 camas de solteiro cada", "Roupa de cama", "Toalhas"] },
+    { name: "Banheiros", imgs: ["banheiro-1|Banheiro compartilhado da casa", "banheiro-2|Banheiro externo"],
+      text: "Além do banheiro da suíte, a casa tem um banheiro compartilhado, dentro da casa, e um banheiro externo.",
+      feats: ["Banheiro compartilhado", "Banheiro externo", "Banheiro da suíte", "Box de vidro", "Toalhas"] },
     { name: "Varanda", imgs: ["varanda", "fachada"],
       text: "A varanda de madeira abraça a casa e olha direto para o lago. Tem rede, poltronas e o melhor café da manhã da sua vida.",
       feats: ["Rede", "Vista para o lago", "Mesa externa", "Espreguiçadeiras"] },
@@ -137,8 +137,10 @@
   }
   function showPhoto(first) {
     const r = ROOMS[room];
-    const src = IMG(r.imgs[photo]);
-    if (first) { $("#roomImg").src = src; $("#roomImg").alt = r.name; } else swapImg(src, r.name);
+    const [file, cap = ""] = r.imgs[photo].split("|");
+    const src = IMG(file), alt = cap || r.name;
+    if (first) { $("#roomImg").src = src; $("#roomImg").alt = alt; } else swapImg(src, alt);
+    $("#roomCap").textContent = cap; $("#roomCap").hidden = !cap;
     $("#roomCount").textContent = `${photo + 1} / ${r.imgs.length}`;
     $("#roomPrev").hidden = $("#roomNext").hidden = r.imgs.length < 2;
   }
