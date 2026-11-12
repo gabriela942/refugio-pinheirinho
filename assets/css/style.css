@@ -395,3 +395,10 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
   .falls__row{display:contents}
   .falls__row img{aspect-ratio:1;width:100%}
 }
+.falls--lake{background:var(--paper)}
+.falls__media{border-radius:var(--radius);overflow:hidden;aspect-ratio:3/2}
+.falls__media img{width:100%;height:100%;object-fit:cover;display:block}
+@media (min-width:901px){ .falls--flip .falls__text{order:2} }
+@media (max-width:600px){
+  .falls--lake .falls__row img:first-child{grid-column:1/-1;aspect-ratio:1.5}
+}
