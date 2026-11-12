@@ -84,7 +84,7 @@
 
   /* ---------- A CASA: explorador ---------- */
   const ROOMS = [
-    { name: "Por fora", imgs: ["casa-gato|A casa", "fachada|A casa", "casa-2|A casa", "casa-noite-2|A casa à noite", "casa-noite-1|A casa à noite"],
+    { name: "Por fora", imgs: ["casa-gato|A casa", "fachada|A casa"],
       text: "Uma casa de madeira amarela, com varanda em volta e gramado a perder de vista. Quando escurece, as luzes da varanda acendem e a casa fica ainda mais aconchegante.",
       feats: ["Casa de madeira", "Varanda iluminada", "Gramado amplo", "Jardim"] },
     { name: "Sala", imgs: ["sala-estar", "sala-jantar"],
@@ -102,7 +102,7 @@
     { name: "Varanda", imgs: ["varanda"],
       text: "A varanda de madeira abraça a casa e olha direto para o lago. Tem rede, poltronas e o melhor café da manhã da sua vida.",
       feats: ["Rede", "Vista para o lago", "Mesa externa", "Espreguiçadeiras"] },
-    { name: "Área gourmet", imgs: ["churrasqueira", "area-externa", "gourmet-violao|Área gourmet"],
+    { name: "Área gourmet", imgs: ["churrasqueira", "area-externa"],
       text: "Coberta e integrada ao jardim. Churrasqueira, forno de pizza e fogão a lenha num só lugar, com mesa grande para reunir todo mundo.",
       feats: ["Churrasqueira", "Forno de pizza a lenha", "Fogão a lenha", "Pia e bancada", "Mesa comunitária", "Lavabo"] },
     // oculto por enquanto: para mostrar de novo, troque hidden: true por hidden: false
