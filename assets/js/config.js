@@ -11,11 +11,11 @@ window.REFUGIO = {
   youtubeId: "",
 
   // Redes e perfis
-  instagram: "",          // ex.: "https://instagram.com/refugiopinheirinho"
-  instagramHandle: "",    // ex.: "@refugiopinheirinho"
-  googleBusiness: "",     // link do perfil no Google Meu Negócio
+  instagram: "https://www.instagram.com/refugio.pinheirinho",          // ex.: "https://instagram.com/refugiopinheirinho"
+  instagramHandle: "@refugio.pinheirinho",    // ex.: "@refugiopinheirinho"
+  googleBusiness: "https://www.google.com/maps/dir//Ref%C3%BAgio+Pinheirinho,+R.+B%C3%A9lgica,+Piedade+-+SP,+18170-000,+Brasil/data=!4m8!4m7!1m0!1m5!1m1!1s0x94c57f8aaae8b467:0x22e4cab58fd7c40d!2m2!1d-47.4627279!2d-23.8663912?hl=pt-BR",     // link do perfil no Google Meu Negócio
   googleReview: "",       // link "escrever avaliação" do Google
-  mapsEmbed: "",          // src do iframe do Google Maps (Compartilhar > Incorporar mapa)
+  mapsEmbed: "https://maps.google.com/maps?q=-23.8663912,-47.4627279&z=15&hl=pt-BR&output=embed",          // src do iframe do Google Maps (Compartilhar > Incorporar mapa)
 
   // Canais de reserva (aparecem como "também estamos no...")
   airbnb: "https://www.airbnb.com.br/rooms/1791327608134215485",
