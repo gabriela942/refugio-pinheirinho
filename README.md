@@ -1,7 +1,8 @@
 # Refúgio Pinheirinho — site
 
 Site estático publicado em https://refugiopinheirinho.com.br.
-Roda numa VPS da Hostinger (srv1997156) com nginx e um app Node para `/api/agenda`; a Cloudflare fica na frente (DNS e proxy).
+Roda na VPS da Hostinger (srv1997156), em `/opt/stack/refugio-site` (container nginx:alpine,
+arquivos em `html/`), atrás do Traefik. A Cloudflare fica na frente (DNS e proxy).
 
 ## Onde editar
 
@@ -18,9 +19,11 @@ Roda numa VPS da Hostinger (srv1997156) com nginx e um app Node para `/api/agend
 A pasta do site na VPS deve puxar a branch `main` deste repositório
 (git pull por webhook, cron ou GitHub Actions). Cada push na `main` vai para o ar.
 
-## Atenção: `/api/agenda`
+## Atenção
 
-O calendário de reserva lê as datas bloqueadas de `/api/agenda`
-(`availabilityEndpoint` em `config.js`). Esse endpoint é um app Node na VPS
-e o código dele **ainda não está neste repositório** (não dá para baixá-lo do
-site no ar). Ele deve entrar na pasta `api/`.
+- **Rotas:** o Traefik só manda para este site `/`, `/index.html` e `/assets/`.
+  O resto do domínio é do app da loja/comanda (`/opt/stack/pinheirinho`). Uma página
+  nova (ex.: `/galeria.html`) precisa de regra nova no `docker-compose.yml` do site.
+- **`/api/agenda`** (datas ocupadas do calendário) não é deste repositório: vem do app
+  `/opt/stack/pinheirinho` (`server.mjs`), que lê o banco `fazenda_pinheiro`.
+  O site só consome o endpoint (`availabilityEndpoint` em `config.js`).
