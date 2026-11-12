@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refúgio Pinheirinho · Casa, natureza e cachoeira</title>
+  <meta name="description" content="Uma casa de campo cercada de mata, com lago, cachoeira particular, lareira, forno a lenha e varanda com rede. Reserve sua estadia no Refúgio Pinheirinho.">
+  <meta property="og:title" content="Refúgio Pinheirinho · Casa, natureza e cachoeira">
+  <meta property="og:description" content="Casa de campo com lago, cachoeira, lareira e muito verde. Reserve pelo WhatsApp.">
+  <meta property="og:image" content="assets/img/cachoeira.jpg">
+  <meta name="theme-color" content="#1d3328">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a href="#topo" class="nav__logo" aria-label="Refúgio Pinheirinho — início">
+    <img class="logo-l" src="assets/img/logo-light.png" alt="Refúgio Pinheirinho">
+    <img class="logo-d" src="assets/img/logo-dark.png" alt="" aria-hidden="true">
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Seções">
+    <a href="#refugio">O Refúgio</a>
+    <a href="#historia">Nossa história</a>
+    <a href="#casa">A casa</a>
+    <a href="#natureza">Natureza</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#local">Como chegar</a>
+  </nav>
+  <a href="#reserva" class="btn btn--sm btn--solid nav__cta">Quero reservar</a>
+  <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="hero__media" id="heroMedia">
+    <!-- O vídeo do YouTube entra aqui via JS (config.js > youtubeId). Sem vídeo, roda o slideshow abaixo. -->
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide is-active" style="background-image:url(assets/img/fachada.jpg)"></div>
+      <div class="hero__slide" style="background-image:url(assets/img/cachoeira.jpg)"></div>
+      <div class="hero__slide" style="background-image:url(assets/img/area-verde.jpg)"></div>
+      <div class="hero__slide" style="background-image:url(assets/img/varanda.jpg)"></div>
+    </div>
+  </div>
+  <div class="hero__shade"></div>
+
+  <div class="hero__content">
+    <img class="hero__logo" src="assets/img/logo-light.png" alt="Refúgio Pinheirinho">
+    <h1 class="hero__title">
+      <span class="reveal-line"><span>Casa,</span></span>
+      <span class="reveal-line"><span><em>natureza</em></span></span>
+      <span class="reveal-line"><span>e cachoeira.</span></span>
+    </h1>
+    <p class="hero__sub">Um lugar para desacelerar entre pinheiros, lago e água corrente, com a casa toda para você e quem você ama.</p>
+    <div class="hero__actions">
+      <a href="#reserva" class="btn btn--solid btn--lg">Quero fazer uma reserva</a>
+      <button class="btn btn--ghost btn--lg" id="playFilm" hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        Assistir ao vídeo
+      </button>
+    </div>
+  </div>
+
+  <a href="#refugio" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Cachoeira</span><i>✦</i><span>Lago</span><i>✦</i><span>Lareira</span><i>✦</i><span>Forno a lenha</span><i>✦</i><span>Churrasqueira</span><i>✦</i><span>Rede na varanda</span><i>✦</i><span>Mata nativa</span><i>✦</i><span>Cavalos no pasto</span><i>✦</i>
+    <span>Cachoeira</span><i>✦</i><span>Lago</span><i>✦</i><span>Lareira</span><i>✦</i><span>Forno a lenha</span><i>✦</i><span>Churrasqueira</span><i>✦</i><span>Rede na varanda</span><i>✦</i><span>Mata nativa</span><i>✦</i><span>Cavalos no pasto</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ===================== O REFÚGIO ===================== -->
+<section class="intro section" id="refugio">
+  <div class="wrap intro__grid">
+    <div class="intro__text">
+      <p class="eyebrow reveal">O Refúgio</p>
+      <h2 class="h2 reveal">Aqui o tempo<br><em>corre devagar.</em></h2>
+      <p class="lead reveal">Café na varanda olhando o lago. Tarde no banco de madeira ao lado da cachoeira. Pizza no forno a lenha quando o sol baixa e conversa comprida em volta da lareira.</p>
+      <p class="reveal">O Refúgio Pinheirinho é uma casa de campo cercada de mata, gramado e água. Espaço de sobra para a família, para os amigos e para não fazer nada.</p>
+      <ul class="pills reveal">
+        <li>Casa inteira só para o seu grupo</li>
+        <li>Lago e cachoeira</li>
+        <li>Área gourmet completa</li>
+      </ul>
+    </div>
+    <div class="intro__visual">
+      <figure class="intro__img intro__img--a" data-parallax="0.08"><img src="assets/img/varanda.jpg" alt="Varanda com rede e vista para o lago" loading="lazy"></figure>
+      <figure class="intro__img intro__img--b" data-parallax="-0.06"><img src="assets/img/sala-estar.jpg" alt="Sala de estar com lareira" loading="lazy"></figure>
+      <img class="intro__stamp" src="assets/img/logo-dark.png" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HISTÓRIA ===================== -->
+<!-- TODO: substituir pelos textos da história que a Gabi vai enviar. Cada .story__item é um capítulo. -->
+<section class="story section" id="historia">
+  <div class="wrap">
+    <p class="eyebrow reveal">Nossa história</p>
+    <h2 class="h2 reveal">Uma casa feita de<br><em>memórias de família.</em></h2>
+
+    <div class="story__track">
+      <div class="story__line"><span id="storyProgress"></span></div>
+
+      <article class="story__item reveal">
+        <span class="story__mark">I</span>
+        <div>
+          <h3>O começo</h3>
+          <p>Como tudo começou: quem encontrou este pedaço de terra, o que tinha aqui e por que ele virou o Pinheirinho.</p>
+        </div>
+        <img src="assets/img/area-verde.jpg" alt="" loading="lazy">
+      </article>
+
+      <article class="story__item reveal">
+        <span class="story__mark">II</span>
+        <div>
+          <h3>A casa</h3>
+          <p>A varanda de madeira, a lareira de tijolinho, a cozinha amarela. Os detalhes que foram ganhando forma com o tempo.</p>
+        </div>
+        <img src="assets/img/fachada.jpg" alt="" loading="lazy">
+      </article>
+
+      <article class="story__item reveal">
+        <span class="story__mark">III</span>
+        <div>
+          <h3>Hoje</h3>
+          <p>Abrimos as portas para que mais gente viva o que a gente vive aqui: silêncio, água corrente e tempo de verdade com quem importa.</p>
+        </div>
+        <img src="assets/img/cachoeira.jpg" alt="" loading="lazy">
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== A CASA (explorador de ambientes) ===================== -->
+<section class="house section" id="casa">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow reveal">A casa</p>
+      <h2 class="h2 reveal">Entre e fique<br><em>à vontade.</em></h2>
+    </div>
+
+    <div class="rooms">
+      <div class="rooms__tabs" role="tablist" aria-label="Ambientes da casa" id="roomTabs"></div>
+      <div class="rooms__stage">
+        <div class="rooms__photo" id="roomPhoto">
+          <img id="roomImg" src="assets/img/sala-estar.jpg" alt="">
+          <button class="rooms__nav rooms__nav--prev" id="roomPrev" aria-label="Foto anterior">‹</button>
+          <button class="rooms__nav rooms__nav--next" id="roomNext" aria-label="Próxima foto">›</button>
+          <span class="rooms__count" id="roomCount"></span>
+        </div>
+        <div class="rooms__info">
+          <h3 id="roomTitle"></h3>
+          <p id="roomText"></p>
+          <ul class="rooms__feats" id="roomFeats"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NATUREZA ===================== -->
+<section class="nature" id="natureza">
+  <div class="nature__intro wrap">
+    <p class="eyebrow eyebrow--light reveal">Natureza</p>
+    <h2 class="h2 h2--light reveal">Lá fora, o verde<br><em>não acaba.</em></h2>
+    <p class="lead lead--light reveal">Arraste para o lado e conheça os cantos favoritos de quem já passou por aqui.</p>
+  </div>
+
+  <div class="nature__rail" id="natureRail" tabindex="0" aria-label="Galeria da natureza, arraste para o lado">
+    <article class="ncard">
+      <img src="assets/img/cachoeira.jpg" alt="Cachoeira com banco de madeira" loading="lazy">
+      <div class="ncard__body"><span>01</span><h3>A cachoeira</h3><p>Água fria, pedras cobertas de musgo e um banco de madeira esperando por você.</p></div>
+    </article>
+    <article class="ncard">
+      <img src="assets/img/area-verde.jpg" alt="Gramado com lago e mata ao fundo" loading="lazy">
+      <div class="ncard__body"><span>02</span><h3>O lago</h3><p>Gramado a perder de vista até a beira d'água. Perfeito para piquenique e fim de tarde.</p></div>
+    </article>
+    <article class="ncard">
+      <img src="assets/img/lago.jpg" alt="Cavalos pastando à beira do lago" loading="lazy">
+      <div class="ncard__body"><span>03</span><h3>Os vizinhos</h3><p>Os cavalos pastam do outro lado do lago. As crianças adoram.</p></div>
+    </article>
+    <article class="ncard">
+      <img src="assets/img/jardim.jpg" alt="Jardim com deck e árvores" loading="lazy">
+      <div class="ncard__body"><span>04</span><h3>O jardim</h3><p>Deck, mesinha e sombra de árvore. Um cantinho para ler, conversar ou só ouvir os passarinhos.</p></div>
+    </article>
+    <article class="ncard">
+      <img src="assets/img/fachada.jpg" alt="Casa amarela com varanda cercada de pinheiros" loading="lazy">
+      <div class="ncard__body"><span>05</span><h3>Os pinheiros</h3><p>Os pinheiros que dão nome ao lugar abraçam a casa por todos os lados.</p></div>
+    </article>
+  </div>
+  <div class="nature__hint wrap" aria-hidden="true"><span class="nature__bar"><span id="railProgress"></span></span> arraste →</div>
+</section>
+
+<!-- ===================== UM DIA NO REFÚGIO ===================== -->
+<section class="day section" id="dia">
+  <div class="wrap day__grid">
+    <div class="day__sticky">
+      <p class="eyebrow reveal">Um dia no Refúgio</p>
+      <h2 class="h2 reveal">Do café da manhã<br><em>à lareira.</em></h2>
+      <div class="day__frame">
+        <img data-day="0" class="is-on" src="assets/img/varanda.jpg" alt="" loading="lazy">
+        <img data-day="1" src="assets/img/cachoeira.jpg" alt="" loading="lazy">
+        <img data-day="2" src="assets/img/area-verde.jpg" alt="" loading="lazy">
+        <img data-day="3" src="assets/img/churrasqueira.jpg" alt="" loading="lazy">
+        <img data-day="4" src="assets/img/sala-estar.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+    <ol class="day__list">
+      <li data-step="0"><time>7h</time><h3>Café na varanda</h3><p>Rede, cheiro de mato molhado e o lago acordando lá embaixo.</p></li>
+      <li data-step="1"><time>10h</time><h3>Hora da cachoeira</h3><p>Um passeio pela mata e um mergulho de água gelada para ninguém esquecer.</p></li>
+      <li data-step="2"><time>15h</time><h3>Tarde no gramado</h3><p>Bola, piquenique, livro na sombra ou cochilo. Aqui ninguém tem pressa.</p></li>
+      <li data-step="3"><time>18h</time><h3>Fogo aceso</h3><p>Churrasqueira, forno de pizza e fogão a lenha. A cozinha vira o centro da casa.</p></li>
+      <li data-step="4"><time>21h</time><h3>Noite de lareira</h3><p>Vinho, jogos de tabuleiro da estante e aquele silêncio que só existe no campo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== GALERIA ===================== -->
+<section class="gallery section" id="galeria">
+  <div class="wrap">
+    <div class="section__head section__head--row">
+      <div>
+        <p class="eyebrow reveal">Galeria</p>
+        <h2 class="h2 reveal">Cada canto,<br><em>de perto.</em></h2>
+      </div>
+      <div class="chips" role="group" aria-label="Filtrar fotos" id="galleryFilters">
+        <button class="chip is-on" data-filter="all">Tudo</button>
+        <button class="chip" data-filter="casa">Casa</button>
+        <button class="chip" data-filter="externa">Área externa</button>
+        <button class="chip" data-filter="natureza">Natureza</button>
+      </div>
+    </div>
+    <div class="masonry" id="gallery"></div>
+  </div>
+</section>
+
+<!-- ===================== RESERVA ===================== -->
+<section class="booking section" id="reserva">
+  <div class="booking__bg" style="background-image:url(assets/img/area-verde.jpg)"></div>
+  <div class="wrap booking__grid">
+    <div class="booking__text">
+      <p class="eyebrow eyebrow--light reveal">Reserva</p>
+      <h2 class="h2 h2--light reveal">Escolha suas datas.<br><em>A gente cuida do resto.</em></h2>
+      <p class="lead lead--light reveal">Selecione o período no calendário e mande para a gente pelo WhatsApp. Respondemos com a disponibilidade e o valor da sua estadia.</p>
+      <div class="channels reveal" id="channels">
+        <span>Também estamos no</span>
+        <a id="lnkAirbnb" target="_blank" rel="noopener">Airbnb</a>
+        <a id="lnkBooking" target="_blank" rel="noopener">Booking</a>
+      </div>
+    </div>
+
+    <form class="bform" id="bookingForm" novalidate>
+      <div class="cal" id="calendar" aria-label="Calendário de disponibilidade">
+        <div class="cal__head">
+          <button type="button" class="cal__arrow" id="calPrev" aria-label="Mês anterior">‹</button>
+          <div class="cal__months" id="calMonths"></div>
+          <button type="button" class="cal__arrow" id="calNext" aria-label="Próximo mês">›</button>
+        </div>
+        <div class="cal__body" id="calBody"></div>
+        <div class="cal__legend">
+          <span><i class="dot dot--sel"></i>Sua estadia</span>
+          <span><i class="dot dot--off"></i>Indisponível</span>
+        </div>
+      </div>
+
+      <div class="bform__summary">
+        <div class="bform__dates">
+          <div><small>Check-in</small><strong id="outIn">—</strong></div>
+          <div><small>Check-out</small><strong id="outOut">—</strong></div>
+          <div><small>Noites</small><strong id="outNights">—</strong></div>
+        </div>
+        <div class="bform__row">
+          <label>Seu nome<input type="text" id="fName" autocomplete="name" placeholder="Como podemos te chamar?"></label>
+          <label>Hóspedes
+            <div class="stepper">
+              <button type="button" data-step="-1" aria-label="Menos hóspedes">−</button>
+              <output id="fGuests">2</output>
+              <button type="button" data-step="1" aria-label="Mais hóspedes">+</button>
+            </div>
+          </label>
+        </div>
+        <label>Alguma observação? <span class="opt">(opcional)</span><textarea id="fNotes" rows="2" placeholder="Aniversário, pet, criança pequena..."></textarea></label>
+        <p class="bform__msg" id="formMsg" role="status"></p>
+        <button type="submit" class="btn btn--wa btn--lg btn--block">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Quero fazer uma reserva
+        </button>
+        <p class="bform__note">Você vai falar direto com a gente pelo WhatsApp. Nada é cobrado agora.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section class="insta section" id="instagram">
+  <div class="wrap">
+    <div class="section__head section__head--center">
+      <p class="eyebrow reveal">Instagram</p>
+      <h2 class="h2 reveal">Acompanhe o <em>dia a dia</em> do Refúgio</h2>
+      <a class="insta__handle reveal" id="instaHandle" target="_blank" rel="noopener">@refugiopinheirinho</a>
+    </div>
+    <div class="insta__grid" id="instaGrid">
+      <a target="_blank" rel="noopener"><img src="assets/img/cachoeira.jpg" alt="" loading="lazy"></a>
+      <a target="_blank" rel="noopener"><img src="assets/img/varanda.jpg" alt="" loading="lazy"></a>
+      <a target="_blank" rel="noopener"><img src="assets/img/lago.jpg" alt="" loading="lazy"></a>
+      <a target="_blank" rel="noopener"><img src="assets/img/cozinha-1.jpg" alt="" loading="lazy"></a>
+      <a target="_blank" rel="noopener"><img src="assets/img/jardim.jpg" alt="" loading="lazy"></a>
+      <a target="_blank" rel="noopener"><img src="assets/img/quarto-casal.jpg" alt="" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCALIZAÇÃO / GOOGLE ===================== -->
+<section class="local section" id="local">
+  <div class="wrap local__grid">
+    <div>
+      <p class="eyebrow reveal">Como chegar</p>
+      <h2 class="h2 reveal">Perto o suficiente.<br><em>Longe de tudo.</em></h2>
+      <p class="reveal">O endereço completo e as dicas de caminho são enviados na confirmação da reserva.</p>
+      <div class="local__actions reveal">
+        <a class="btn btn--line" id="lnkGoogle" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Ver no Google
+        </a>
+        <a class="btn btn--line" id="lnkReview" target="_blank" rel="noopener">★ Avalie a gente no Google</a>
+      </div>
+    </div>
+    <div class="local__map" id="mapBox">
+      <div class="local__mapph">
+        <img src="assets/img/area-verde.jpg" alt="" loading="lazy">
+        <span>Mapa do Google entra aqui</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="final">
+  <div class="final__bg" data-parallax="0.15" style="background-image:url(assets/img/cachoeira.jpg)"></div>
+  <div class="final__content wrap">
+    <h2 class="h2 h2--light reveal">Seu próximo fim de semana<br><em>pode ser aqui.</em></h2>
+    <a href="#reserva" class="btn btn--solid btn--lg reveal">Quero fazer uma reserva</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img class="footer__logo" src="assets/img/logo-light.png" alt="Refúgio Pinheirinho">
+    <p>Casa, natureza e cachoeira.</p>
+    <div class="footer__links">
+      <a id="ftWa" target="_blank" rel="noopener">WhatsApp</a>
+      <a id="ftInsta" target="_blank" rel="noopener">Instagram</a>
+      <a id="ftGoogle" target="_blank" rel="noopener">Google</a>
+    </div>
+    <small>© <span id="year"></span> Refúgio Pinheirinho</small>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+  <span>Fale com a gente</span>
+</a>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Fechar">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próxima">›</button>
+</div>
+
+<!-- Modal do vídeo -->
+<div class="lightbox" id="filmModal" hidden>
+  <button class="lightbox__close" id="filmClose" aria-label="Fechar">×</button>
+  <div class="film" id="filmBox"></div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
