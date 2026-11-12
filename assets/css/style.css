@@ -459,3 +459,5 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .steps__pdf{justify-self:center;margin-top:6px}
 .steps__end{text-align:center;margin-top:clamp(36px,5vw,56px);display:grid;gap:14px;justify-items:center}
 .steps__end p{color:var(--muted)}
+.step__img--duo{display:grid;grid-template-rows:1fr 1fr;gap:6px;aspect-ratio:8/9;background:none}
+.step__img--duo img{border-radius:var(--radius)}
