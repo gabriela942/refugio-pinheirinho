@@ -105,13 +105,14 @@
     { name: "Área gourmet", imgs: ["churrasqueira", "area-externa", "gourmet-violao|Área gourmet"],
       text: "Coberta e integrada ao jardim. Churrasqueira, forno de pizza e fogão a lenha num só lugar, com mesa grande para reunir todo mundo.",
       feats: ["Churrasqueira", "Forno de pizza a lenha", "Fogão a lenha", "Pia e bancada", "Mesa comunitária", "Lavabo"] },
-    { name: "Salão de jogos", imgs: ["jogos-1|Mesa de sinuca", "jogos-2|Deck com vista para o lago", "jogos-3|O salão por fora", "jogos-4|Salão de jogos", "jogos-banheiro|Banheiro do salão"],
+    // oculto por enquanto: para mostrar de novo, troque hidden: true por hidden: false
+    { name: "Salão de jogos", hidden: true, imgs: ["jogos-1|Mesa de sinuca", "jogos-2|Deck com vista para o lago", "jogos-3|O salão por fora", "jogos-4|Salão de jogos", "jogos-banheiro|Banheiro do salão"],
       text: "Um contêiner vermelho virou o salão de jogos, separado da casa. Tem mesa de sinuca, portas de vidro de ponta a ponta e um deck de madeira de frente para o lago. Tem banheiro próprio.",
       feats: ["Mesa de sinuca", "Deck com vista para o lago", "Portas e janelas amplas", "Banheiro próprio"] },
     { name: "Lavanderia", imgs: ["lavanderia"],
       text: "Para estadias mais longas, a casa conta com lavanderia equipada.",
       feats: ["Máquina de lavar", "Secadora", "Tanque e varal"] }
-  ];
+  ].filter(r => !r.hidden);
   const tabs = $("#roomTabs");
   let room = 0, photo = 0;
   ROOMS.forEach((r, i) => {
