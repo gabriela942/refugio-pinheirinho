@@ -84,6 +84,9 @@
 
   /* ---------- A CASA: explorador ---------- */
   const ROOMS = [
+    { name: "Por fora", imgs: ["fachada|A casa", "casa-noite-2|A casa à noite", "casa-noite-1|A casa à noite"],
+      text: "Uma casa de madeira amarela, com varanda em volta e gramado a perder de vista. Quando escurece, as luzes da varanda acendem e a casa fica ainda mais aconchegante.",
+      feats: ["Casa de madeira", "Varanda iluminada", "Gramado amplo", "Jardim"] },
     { name: "Sala", imgs: ["sala-estar", "sala-jantar"],
       text: "Lareira de tijolinho, sofás para a família toda e janelas de vidro que abrem para a varanda. A mesa de jantar fica ao lado da estante cheia de livros e jogos.",
       feats: ["Lareira", "TV", "Mesa de jantar", "Livros e jogos de tabuleiro"] },
@@ -96,7 +99,7 @@
     { name: "Banheiros", imgs: ["banheiro-1|Banheiro compartilhado da casa", "banheiro-2|Banheiro externo"],
       text: "Além do banheiro da suíte, a casa tem um banheiro compartilhado, dentro da casa, e um banheiro externo.",
       feats: ["Banheiro compartilhado", "Banheiro externo", "Banheiro da suíte", "Box de vidro", "Toalhas"] },
-    { name: "Varanda", imgs: ["varanda", "fachada"],
+    { name: "Varanda", imgs: ["varanda"],
       text: "A varanda de madeira abraça a casa e olha direto para o lago. Tem rede, poltronas e o melhor café da manhã da sua vida.",
       feats: ["Rede", "Vista para o lago", "Mesa externa", "Espreguiçadeiras"] },
     { name: "Área gourmet", imgs: ["churrasqueira", "area-externa"],
