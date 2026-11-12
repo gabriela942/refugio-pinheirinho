@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=202611122100">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202611122130">
 </head>
 <body class="loc">
 
@@ -40,7 +40,7 @@
             Abrir no Google Maps
           </a>
         </div>
-        <p class="local__tip">Para o trecho final, veja o vídeo logo abaixo.</p>
+        <p class="local__tip">Os apps te levam até a rodovia. Para o trecho final, veja o vídeo e o passo a passo logo abaixo.</p>
       </div>
       <div class="local__map" id="mapBox"></div>
     </div>
@@ -52,6 +52,88 @@
         <p>Dá uma olhada no vídeo antes de sair, para reconhecer a entrada quando chegar.</p>
       </div>
       <div class="route__video" id="routeVideo"></div>
+    </div>
+
+    <div class="wrap steps" id="passos">
+      <div class="route__head">
+        <p class="eyebrow">Passo a passo</p>
+        <h2>Do asfalto até a porta de casa</h2>
+        <p>O mesmo caminho do vídeo, em fotos. Toque em "Ver no vídeo" para assistir àquele trecho.</p>
+      </div>
+      <ol class="steps__list">
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-1.jpg" alt="Encoste no acostamento" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">1</span>
+            <h3>Encoste no acostamento</h3>
+            <p>Na rodovia, depois da curva, jogue o carro para o acostamento e faça a conversão por fora.</p>
+            <button type="button" class="step__play" data-t="127">▶ Ver no vídeo (2:07)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-2.jpg" alt="Vire à esquerda na entrada de terra" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">2</span>
+            <h3>Vire à esquerda na entrada de terra</h3>
+            <p>Essa já é a entrada. Pegue o caminho da esquerda. Não entre no da direita.</p>
+            <button type="button" class="step__play" data-t="141">▶ Ver no vídeo (2:21)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-3.jpg" alt="Suba até o portal de madeira" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">3</span>
+            <h3>Suba até o portal de madeira</h3>
+            <p>Essa é a entrada da fazenda. Vamos deixar o portão aberto para você. Não precisa fechar, a gente fecha depois.</p>
+            <button type="button" class="step__play" data-t="150">▶ Ver no vídeo (2:30)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-4.jpg" alt="Desça a estradinha devagar" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">4</span>
+            <h3>Desça a estradinha devagar</h3>
+            <p>Siga reto, descendo com calma: daqui para a frente o caminho é todo de terra.</p>
+            <button type="button" class="step__play" data-t="170">▶ Ver no vídeo (2:50)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-5.jpg" alt="Continue reto" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">5</span>
+            <h3>Continue reto</h3>
+            <p>Você já está dentro da fazenda e pode entrar sem problema. É só continuar reto.</p>
+            <button type="button" class="step__play" data-t="220">▶ Ver no vídeo (3:40)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-6.jpg" alt="Na bifurcação, direita e depois esquerda" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">6</span>
+            <h3>Na bifurcação, direita e depois esquerda</h3>
+            <p>A casa aparece lá no fundo. Vire à direita e, logo em seguida, vire à esquerda na entrada.</p>
+            <button type="button" class="step__play" data-t="258">▶ Ver no vídeo (4:18)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-7.jpg" alt="Siga reto até a casa" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">7</span>
+            <h3>Siga reto até a casa</h3>
+            <p>Agora você já enxerga bem a casa amarela.</p>
+            <button type="button" class="step__play" data-t="280">▶ Ver no vídeo (4:40)</button>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step__img"><img src="/assets/img/rota-8.jpg" alt="Estacione e pronto" loading="lazy"></figure>
+          <div class="step__txt">
+            <span class="step__n">8</span>
+            <h3>Estacione e pronto</h3>
+            <p>Pode deixar os carros todos por aqui. Chegou!</p>
+            <button type="button" class="step__play" data-t="296">▶ Ver no vídeo (4:56)</button>
+          </div>
+        </li>
+      </ol>
     </div>
 
     <div class="wrap loc__help">
@@ -69,7 +151,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/config.js?v=202611122100"></script>
+<script src="/assets/js/config.js?v=202611122130"></script>
 <script>
 (() => {
   const C = window.REFUGIO || {};
@@ -80,8 +162,18 @@
   setLink($("#lnkWa"), C.whatsapp && `https://wa.me/${C.whatsapp}?text=${encodeURIComponent("Olá! Estou a caminho do Refúgio Pinheirinho e fiquei com uma dúvida sobre o caminho.")}`);
   if (C.mapsEmbed) $("#mapBox").innerHTML = `<iframe src="${C.mapsEmbed}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Refúgio Pinheirinho"></iframe>`;
   else $("#mapBox").hidden = true;
-  if (C.routeVideoId) $("#routeVideo").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${C.routeVideoId}?rel=0&modestbranding=1&playsinline=1" title="Como chegar ao Refúgio Pinheirinho" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-  else $("#rota").hidden = true;
+  const video = (start = 0, autoplay = false) =>
+    `<iframe src="https://www.youtube-nocookie.com/embed/${C.routeVideoId}?rel=0&modestbranding=1&playsinline=1${start ? "&start=" + start : ""}${autoplay ? "&autoplay=1" : ""}" title="Como chegar ao Refúgio Pinheirinho" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+  if (C.routeVideoId) {
+    $("#routeVideo").innerHTML = video();
+    document.querySelectorAll(".step__play").forEach(b => b.addEventListener("click", () => {
+      $("#routeVideo").innerHTML = video(+b.dataset.t, true);
+      $("#rota").scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+  } else {
+    $("#rota").hidden = true;
+    document.querySelectorAll(".step__play").forEach(b => (b.hidden = true));
+  }
   $("#year").textContent = new Date().getFullYear();
 })();
 </script>
