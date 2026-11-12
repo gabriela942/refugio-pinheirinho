@@ -18,12 +18,6 @@
   if (!C.airbnb && !C.booking) $("#channels").hidden = true;
   setLink($("#lnkGoogle"), C.googleBusiness);
   setLink($("#lnkReview"), C.googleReview);
-  setLink($("#lnkWaze"), C.waze);
-  if (C.routeVideoId) {
-    $("#routeVideo").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${C.routeVideoId}?rel=0&modestbranding=1&playsinline=1" title="Como chegar ao Refúgio Pinheirinho" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-  } else {
-    $("#rota").hidden = true;
-  }
   setLink($("#ftGoogle"), C.googleBusiness);
   setLink($("#ftInsta"), C.instagram);
   if (C.instagram) {
