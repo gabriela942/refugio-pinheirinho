@@ -93,7 +93,7 @@
     { name: "Cozinha", imgs: ["cozinha-1", "cozinha-2"],
       text: "Ampla, iluminada e completa. Tem tudo para cozinhar de verdade: do café da manhã ao jantar de domingo.",
       feats: ["Fogão de 6 bocas", "Lava-louças", "Micro-ondas e forno elétrico", "Panelas e utensílios", "Mesa para refeições"] },
-    { name: "Quartos", imgs: ["quarto-casal|Suíte de casal", "quarto-solteiro|Quarto com duas camas de solteiro"],
+    { name: "Quartos", imgs: ["quarto-casal|Quarto 1 · suíte de casal", "banheiro-suite|Banheiro da suíte", "quarto-solteiro|Quarto 2 · duas camas de solteiro", "quarto-3b|Quarto 3 · duas camas de solteiro", "quarto-3a|Quarto 3 · duas camas de solteiro"],
       text: "São três quartos: uma suíte de casal, com banheiro próprio, e dois quartos com duas camas de solteiro cada um. Todos com piso de madeira, cortinas de crochê e janela para o verde. Roupa de cama e toalhas estão à disposição de vocês.",
       feats: ["1 suíte de casal com banheiro", "2 quartos com 2 camas de solteiro cada", "Roupa de cama", "Toalhas"] },
     { name: "Banheiros", imgs: ["banheiro-1|Banheiro compartilhado da casa", "banheiro-2|Banheiro externo"],
