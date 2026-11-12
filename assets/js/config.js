@@ -16,7 +16,7 @@ window.REFUGIO = {
   googleBusiness: "https://www.google.com/maps/dir//Ref%C3%BAgio+Pinheirinho,+R.+B%C3%A9lgica,+Piedade+-+SP,+18170-000,+Brasil/data=!4m8!4m7!1m0!1m5!1m1!1s0x94c57f8aaae8b467:0x22e4cab58fd7c40d!2m2!1d-47.4627279!2d-23.8663912?hl=pt-BR",     // link do perfil no Google Meu Negócio
   googleReview: "",       // link "escrever avaliação" do Google
   // Link do Waze (Waze > Compartilhar local). Este abre a rota direto até as coordenadas da casa.
-  waze: "https://waze.com/ul?ll=-23.8663912,-47.4627279&navigate=yes",
+  waze: "https://waze.com/ul/h6gy20p0ng",
   // ID do vídeo do YouTube "Como chegar" (o finalzinho do caminho)
   routeVideoId: "FnzXljuhcsM",
   mapsEmbed: "https://maps.google.com/maps?q=-23.8663912,-47.4627279&z=15&hl=pt-BR&output=embed",          // src do iframe do Google Maps (Compartilhar > Incorporar mapa)
