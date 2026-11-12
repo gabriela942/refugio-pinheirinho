@@ -453,3 +453,9 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .near__card p{color:var(--muted);font-size:.96rem}
 .near__link{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:8px;color:var(--wood);font-weight:500}
 @media (max-width:900px){ .near__grid{grid-template-columns:1fr} }
+.steps__notes{max-width:760px;margin:0 auto clamp(28px,4vw,44px);display:grid;gap:12px;text-align:left}
+.steps__note{background:var(--cream);border-left:4px solid var(--sun);border-radius:12px;padding:14px 18px;color:var(--ink);font-size:.98rem}
+.steps__note--signal{border-left-color:var(--wood)}
+.steps__pdf{justify-self:center;margin-top:6px}
+.steps__end{text-align:center;margin-top:clamp(36px,5vw,56px);display:grid;gap:14px;justify-items:center}
+.steps__end p{color:var(--muted)}
