@@ -7,7 +7,7 @@ const html = fs.readFileSync(path.join(root, 'localizacao/index.html'), 'utf8');
 const strip = s => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 const steps = [...html.matchAll(/<li class="step[^"]*">([\s\S]*?)<\/li>/g)].map(m => {
   const b = m[1];
-  const img = (b.match(/<img src="\/([^"]+)"/) || [])[1];
+  const img = ((b.match(/<img src="\/([^"?]+)/) || [])[1]);
   return { n: strip((b.match(/step__n">([\s\S]*?)</) || [])[1] || ''), h: strip((b.match(/<h3>([\s\S]*?)<\/h3>/) || [])[1] || ''),
            p: strip((b.match(/<p>([\s\S]*?)<\/p>/) || [])[1] || ''), img: img && 'file://' + path.join(root, img) };
 });
