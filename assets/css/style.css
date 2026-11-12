@@ -136,6 +136,8 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .story__item p{color:var(--muted);max-width:440px}
 .story__pics{display:flex;gap:10px;align-items:stretch}
 .story__item .story__pics img{flex:var(--r) 1 0;min-width:0;width:auto;aspect-ratio:var(--r);border-radius:var(--radius)}
+.story__item--wide{grid-template-columns:56px 1fr}
+.story__item--wide .story__mosaic{grid-column:2;display:grid;gap:10px}
 .story__item p.story__sign{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--wood)}
 .story__item img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius)}
 
@@ -355,6 +357,10 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
   .story__line{left:21px}
   .story__pics{flex-direction:column}
   .story__item .story__pics img{flex:none;width:100%}
+  .story__mosaic{grid-template-columns:1fr 1fr}
+  .story__mosaic .story__pics{display:contents}
+  .story__item .story__mosaic img{grid-column:auto;aspect-ratio:1;object-fit:cover}
+  .story__item .story__mosaic .story__pics:first-child img:first-child{grid-column:1/-1;aspect-ratio:1.5}
   .masonry{grid-template-columns:1fr 1fr;gap:10px}
   .bform__row{grid-template-columns:1fr}
   .stepper{width:max-content}
