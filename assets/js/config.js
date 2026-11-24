@@ -45,6 +45,8 @@ window.REFUGIO = {
     feriados: [
       // Natal e Ano Novo 2026
       "2026-12-24", "2026-12-25", "2026-12-31", "2027-01-01",
+      // Aniversário de São Paulo (segunda, 25/01)
+      "2027-01-23", "2027-01-24",
       // Carnaval 2027 (sexta a terça)
       "2027-02-05", "2027-02-06", "2027-02-07", "2027-02-08", "2027-02-09",
       // Semana Santa 2027
