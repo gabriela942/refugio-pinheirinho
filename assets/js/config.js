@@ -34,5 +34,39 @@ window.REFUGIO = {
   availabilityEndpoint: "/api/agenda",
 
   // Mínimo de noites por reserva
-  minNights: 2
+  minNights: 2,
+
+  /* Preço da diária (R$). Cada noite vale pelo dia em que ela começa:
+     a noite de 24/12 é a que entra no dia 24 e sai no dia 25.
+     Para mudar um feriado, acrescente ou tire a data da lista. */
+  prices: {
+    normal: 530,
+    feriado: 1000,
+    feriados: [
+      // Natal e Ano Novo 2026
+      "2026-12-24", "2026-12-25", "2026-12-31", "2027-01-01",
+      // Carnaval 2027 (sexta a segunda)
+      "2027-02-05", "2027-02-06", "2027-02-07", "2027-02-08",
+      // Semana Santa 2027
+      "2027-03-25", "2027-03-26", "2027-03-27",
+      // Tiradentes (quarta, 21/04)
+      "2027-04-20", "2027-04-21",
+      // Dia do Trabalho (sábado, 01/05)
+      "2027-04-30", "2027-05-01",
+      // Corpus Christi (quinta, 27/05)
+      "2027-05-27", "2027-05-28", "2027-05-29",
+      // Independência (terça, 07/09)
+      "2027-09-04", "2027-09-05", "2027-09-06",
+      // Nossa Senhora Aparecida (terça, 12/10)
+      "2027-10-09", "2027-10-10", "2027-10-11",
+      // Finados (terça, 02/11)
+      "2027-10-30", "2027-10-31", "2027-11-01",
+      // Proclamação da República (segunda, 15/11)
+      "2027-11-13", "2027-11-14",
+      // Consciência Negra (sábado, 20/11)
+      "2027-11-19", "2027-11-20",
+      // Natal e Ano Novo 2027
+      "2027-12-24", "2027-12-25", "2027-12-31", "2028-01-01"
+    ]
+  }
 };

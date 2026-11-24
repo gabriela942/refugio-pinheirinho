@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=202611122320">
+  <link rel="stylesheet" href="assets/css/style.css?v=202611241200">
 </head>
 <body>
 
@@ -336,7 +336,7 @@
     <div class="booking__text">
       <p class="eyebrow eyebrow--light reveal">Reserva</p>
       <h2 class="h2 h2--light reveal">Escolha suas datas.<br><em>A gente cuida do resto.</em></h2>
-      <p class="lead lead--light reveal">Selecione o período no calendário e mande para a gente pelo WhatsApp. Respondemos com a disponibilidade e o valor da sua estadia.</p>
+      <p class="lead lead--light reveal">Selecione o período no calendário e mande para a gente pelo WhatsApp. A diária é R$ 530 e, em feriados, R$ 1.000. O valor de cada noite aparece no calendário.</p>
       <div class="channels reveal" id="channels">
         <span>Também estamos no</span>
         <a id="lnkAirbnb" target="_blank" rel="noopener">Airbnb</a>
@@ -355,6 +355,7 @@
         <div class="cal__legend">
           <span><i class="dot dot--sel"></i>Sua estadia</span>
           <span><i class="dot dot--off"></i>Indisponível</span>
+          <span><i class="dot dot--hol"></i>Feriado</span>
         </div>
       </div>
 
@@ -364,6 +365,7 @@
           <div><small>Check-out</small><strong id="outOut">—</strong></div>
           <div><small>Noites</small><strong id="outNights">—</strong></div>
         </div>
+        <div class="bform__total"><span>Total da estadia</span><strong id="outTotal">—</strong></div>
         <div class="bform__row">
           <label>Seu nome<input type="text" id="fName" autocomplete="name" placeholder="Como podemos te chamar?"></label>
           <label>Hóspedes
@@ -472,7 +474,7 @@
   <div class="film" id="filmBox"></div>
 </div>
 
-<script src="assets/js/config.js?v=202611122320"></script>
-<script src="assets/js/main.js?v=202611122320"></script>
+<script src="assets/js/config.js?v=202611241200"></script>
+<script src="assets/js/main.js?v=202611241200"></script>
 </body>
 </html>

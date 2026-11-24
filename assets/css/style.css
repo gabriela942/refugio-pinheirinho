@@ -249,22 +249,31 @@ em{font-style:italic;font-weight:400;color:var(--wood)}
 .cal__arrow:disabled{opacity:.3;cursor:default}
 .cal__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
 .cal__dow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 0}
-.cal__day{aspect-ratio:1;display:grid;place-items:center;font-size:.92rem;border-radius:10px;position:relative;transition:background .2s,color .2s}
+.cal__day{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.1;font-size:.92rem;border-radius:10px;position:relative;transition:background .2s,color .2s}
 .cal__day:hover:not(:disabled){background:var(--cream)}
 .cal__day:disabled{color:#b9bdb7;cursor:not-allowed}
 .cal__day.is-off{text-decoration:line-through;color:#b9bdb7;background:repeating-linear-gradient(135deg,transparent 0 4px,rgba(0,0,0,.035) 4px 8px)}
 .cal__day.is-today{font-weight:600;color:var(--wood)}
 .cal__day.in-range{background:rgba(228,172,47,.22);border-radius:0}
 .cal__day.is-start,.cal__day.is-end{background:var(--forest)!important;color:#fff!important;border-radius:10px}
+.cal__n{font-size:.92rem}
+.cal__p{font-size:.6rem;color:var(--muted);letter-spacing:-.02em;white-space:nowrap}
+.cal__day.is-holiday .cal__p{color:var(--wood);font-weight:600}
+.cal__day.is-start .cal__p,.cal__day.is-end .cal__p{color:rgba(255,255,255,.85)}
+@media (max-width:380px){.cal__p{font-size:.52rem}}
 .cal__legend{display:flex;gap:18px;font-size:.8rem;color:var(--muted);margin-top:12px}
 .cal__legend span{display:flex;align-items:center;gap:6px}
 .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
 .dot--sel{background:var(--forest)}
 .dot--off{background:repeating-linear-gradient(135deg,#ccc 0 2px,#eee 2px 4px)}
+.dot--hol{background:var(--wood)}
 .bform__summary{display:flex;flex-direction:column;gap:16px}
 .bform__dates{display:grid;grid-template-columns:1fr 1fr .7fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .bform__dates>div{padding:10px 14px;border-right:1px solid var(--line)}
 .bform__dates>div:last-child{border-right:0}
+.bform__total{display:flex;justify-content:space-between;align-items:baseline;padding:2px 4px}
+.bform__total span{font-size:.85rem;color:var(--muted)}
+.bform__total strong{font-family:var(--serif,inherit);font-weight:500;font-size:1.35rem;color:var(--forest)}
 .bform__dates small{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .bform__dates strong{font-weight:500;color:var(--forest);font-size:1rem}
 .bform label{display:flex;flex-direction:column;gap:6px;font-size:.85rem;color:var(--muted)}

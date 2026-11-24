@@ -260,6 +260,12 @@
   let ci = null, co = null;
 
   const isBlocked = d => blocked.has(localKey(d));
+  const P = C.prices || {};
+  const feriados = new Set(P.feriados || []);
+  const nightPrice = d => (feriados.has(localKey(d)) ? P.feriado : P.normal) || 0;
+  const brl = v => "R$ " + v.toLocaleString("pt-BR");
+  const brlShort = v => "R$" + v.toLocaleString("pt-BR");
+  const stayTotal = (a, b) => { let t = 0; for (let d = new Date(a); d < b; d = addDays(d, 1)) t += nightPrice(d); return t; };
   const rangeHasBlock = (a, b) => { for (let d = new Date(a); d < b; d = addDays(d, 1)) if (isBlocked(d)) return true; return false; };
 
   function renderCal() {
@@ -276,16 +282,19 @@
       for (let n = 1; n <= days; n++) {
         const d = new Date(viewY, viewM, n);
         const b = document.createElement("button");
-        b.type = "button"; b.className = "cal__day"; b.textContent = n;
+        b.type = "button"; b.className = "cal__day";
         b.dataset.k = localKey(d);
         const past = d < today, off = isBlocked(d);
+        const price = !past && !off ? nightPrice(d) : 0;
+        b.innerHTML = `<span class="cal__n">${n}</span>` + (price ? `<span class="cal__p">${brlShort(price)}</span>` : "");
+        if (price && feriados.has(localKey(d))) b.classList.add("is-holiday");
         if (past) b.disabled = true;
         if (off) { b.classList.add("is-off"); b.title = "Indisponível"; }
         if (+d === +today) b.classList.add("is-today");
         if (ci && +d === +ci) b.classList.add("is-start");
         if (co && +d === +co) b.classList.add("is-end");
         if (ci && co && d > ci && d < co) b.classList.add("in-range");
-        b.setAttribute("aria-label", d.toLocaleDateString("pt-BR", { day: "numeric", month: "long" }) + (off ? ", indisponível" : ""));
+        b.setAttribute("aria-label", d.toLocaleDateString("pt-BR", { day: "numeric", month: "long" }) + (off ? ", indisponível" : price ? `, diária ${brl(price)}` : ""));
         b.addEventListener("click", () => pick(d));
         b.addEventListener("mouseenter", () => hover(d));
         grid.appendChild(b);
@@ -315,6 +324,7 @@
     $("#outIn").textContent = ci ? fmt(ci) : "—";
     $("#outOut").textContent = co ? fmt(co) : "—";
     $("#outNights").textContent = ci && co ? Math.round((co - ci) / 864e5) : "—";
+    $("#outTotal").textContent = ci && co ? brl(stayTotal(ci, co)) : "—";
   }
   $("#calPrev").addEventListener("click", () => { viewM--; if (viewM < 0) { viewM = 11; viewY--; } renderCal(); });
   $("#calNext").addEventListener("click", () => { viewM++; if (viewM > 11) { viewM = 0; viewY++; } renderCal(); });
@@ -345,7 +355,7 @@
     let text = `Olá! ${name ? "Meu nome é " + name + " e " : ""}quero fazer uma reserva no Refúgio Pinheirinho.\n\n`;
     if (ci && co) {
       const n = Math.round((co - ci) / 864e5);
-      text += `📅 Check-in: ${fmtFull(ci)}\n📅 Check-out: ${fmtFull(co)}\n🌙 ${n} noite${n > 1 ? "s" : ""}\n`;
+      text += `📅 Check-in: ${fmtFull(ci)}\n📅 Check-out: ${fmtFull(co)}\n🌙 ${n} noite${n > 1 ? "s" : ""}\n💰 Valor pelo site: ${brl(stayTotal(ci, co))}\n`;
     } else if (ci) {
       text += `📅 Chegada: ${fmtFull(ci)} (saída a combinar)\n`;
     } else {
@@ -353,7 +363,7 @@
     }
     text += `👥 ${guests} hóspede${guests > 1 ? "s" : ""}\n`;
     if (notes) text += `📝 ${notes}\n`;
-    text += `\nPode me passar a disponibilidade e o valor?`;
+    text += ci && co ? `\nPode confirmar a disponibilidade?` : `\nPode me passar a disponibilidade e o valor?`;
     msg("Abrindo o WhatsApp...", true);
     window.open(waLink(text), "_blank", "noopener");
   });
